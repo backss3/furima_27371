@@ -43,11 +43,6 @@
 |item_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 |address_id|integer|null: false, foreign_key: true|
-|card_number|integer|null: false|
-|year|integer|null: false|
-|month|integer|null: false|
-|day|integer|null: false|
-|security_cord|integer|null: false|
 
 ### Association
 - belongs_to :address
