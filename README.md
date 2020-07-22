@@ -42,10 +42,8 @@
 |------|----|-------|
 |item_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
-|address_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :address
 - belongs_to :user
 - belongs_to :item
 
@@ -62,7 +60,6 @@
 
 ### Association
 - belongs_to :user
-- belongs_to :deal_item
 
 ## comments_table
 |Column|Type|Options|
