@@ -12,7 +12,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :family_name,        null: false
       t.string :first_name_kana,    null: false
       t.string :family_name_kana,   null: false
-      t.integer :birthday,          null: false
+      t.date :birthday,          null: false
 
       ## Recoverable
       t.string   :reset_password_token
@@ -50,4 +50,3 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
     # add_index :users, :unlock_token,         unique: true
   end
 end
-
