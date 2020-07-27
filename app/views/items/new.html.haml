@@ -4,7 +4,7 @@
       = link_to image_tag('furima-logo-color.png' , size: '185x50'), "/"
     .items-sell-main
       %h2.items-sell-title 商品の情報を入力
-      = form_with local: true do |f|
+      = form_with model: @item, url: '/items/new', local: true do |f|
         .img-upload
           .weight-bold-text
             出品画像
@@ -29,7 +29,7 @@
             .weight-bold-text
               カテゴリー
               %span.indispensable 必須
-            = f.collection_select(category_id:, [], :hoge, :hoge, {}, {class:"select-box"})
+              = f.collection_select(:category_id, [], :hoge, :hoge, {}, {class:"select-box"})
             .weight-bold-text
               商品の状態
               %span.indispensable 必須
