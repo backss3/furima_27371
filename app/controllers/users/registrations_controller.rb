@@ -11,7 +11,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    @user = User.create(create_params)
+    @user = User.create(user_params)
     if @user.save
       redirect_to root_path
     else
@@ -20,7 +20,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   private
-  def create_params
+
+  def user_params
     params.require(:user).permit(:nickname, :email, :password, :password_confirmation, :encrypted_password, :first_name, :family_name, :first_name_kana, :family_name_kana, :birthday)
   end
   # GET /resource/edit
