@@ -18,6 +18,7 @@
     = link_to '削除', item_path(@item), method: :delete, class:'item-destroy'
   - elsif user_signed_in?
     = link_to '購入画面に進む', "#" ,class:"item-red-btn"
+    
     .item-explain-box
       %span= "商品説明"
     %table.detail-table
