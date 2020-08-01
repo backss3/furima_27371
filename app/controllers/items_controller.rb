@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user! ,except: [:index, :show]
   before_action :set_item, only: [:edit, :show, :destroy, :update]
 
   def index
@@ -21,6 +21,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @item.destroy
+    
   end
 
   def edit
@@ -35,7 +36,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.all
   end
 
   private

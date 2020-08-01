@@ -5,7 +5,6 @@
     .items-sell-main
       %h2.items-sell-title 商品の情報を入力
       = form_with model: @item, local: true do |f|
-      = render 'shared/error_message', model: f.object
         .img-upload
           .weight-bold-text
             出品画像
@@ -90,10 +89,8 @@
             %a{:href => "#"} 加盟店規約
             に同意したことになります。
         .sell-btn-contents
-          - if user_signed_in?
-            = f.submit "出品する" ,class:"sell-btn"
-            = link_to 'もどる', root_path, class:"back-btn"
-          - else
+          = f.submit "出品する" ,class:"sell-btn"
+          = link_to 'もどる', root_path, class:"back-btn"
     %footer.items-sell-footer
       %ul.menu
         %li
