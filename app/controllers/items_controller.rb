@@ -35,6 +35,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = Item.all
   end
 
   private
