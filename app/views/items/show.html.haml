@@ -2,14 +2,14 @@
 .item-show
   .item-box
     %h2.name
-      = item.name
+      = @item.name
     .item-img-content
-      = image_tag item.image ,class:"item-box-img"
+      = image_tag @item.image ,class:"item-box-img"
       .sold-out
         %span Sold Out!!
     .item-price-box
       %span.item-price
-        = item.price
+        = @item.price
       %span.item-postage
         (税込) 送料込み
     = link_to '商品の編集', edit_item_path(item.id), method: :get, class: "item-red-btn"
@@ -22,22 +22,22 @@
       %tbody
         %tr
           %th.detail-item 出品者
-          %td.detail-value= item.user.nickname[:name]
+          %td.detail-value= @item.user.nickname[:name]
         %tr
           %th.detail-item カテゴリー
-          %td.detail-value= item.category_id
+          %td.detail-value= @item.category_id
         %tr
           %th.detail-item 商品の状態
-          %td.detail-value= item.status_id
+          %td.detail-value= @item.status_id
         %tr
           %th.detail-item 配送料の負担
-          %td.detail-value= item.cost_id
+          %td.detail-value= @item.cost_id
         %tr
           %th.detail-item 発送元の地域
-          %td.detail-value= item.prefecture_id
+          %td.detail-value= @item.prefecture_id
         %tr
           %th.detail-item 発送日の目安
-          %td.detail-value= item.day_id
+          %td.detail-value= @item.day_id
     .option
       .favorite-btn
         = image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"
