@@ -52,9 +52,9 @@ describe User do
       expect(user.errors[:first_name]).to include("を入力してください")
     end
     it "last_nameが空ならNG" do
-      user = build(:user, last_name: nil)
+      user = build(:user, family_name: nil)
       user.valid?
-      expect(user.errors[:last_name]).to include("を入力してください")
+      expect(user.errors[:family_name]).to include("を入力してください")
     end
     it "first_name_kanaが空ならNG" do
       user = build(:user, first_name_kana: nil)
@@ -62,9 +62,9 @@ describe User do
       expect(user.errors[:first_name_kana]).to include("を入力してください")
     end
     it "last_name_kanaが空ならNG" do
-      user = build(:user, last_name_kana: nil)
+      user = build(:user, family_name_kana: nil)
       user.valid?
-      expect(user.errors[:last_name_kana]).to include("を入力してください")
+      expect(user.errors[:family_name_kana]).to include("を入力してください")
     end
     it "birthdayが空ならNG" do
       user = build(:user, birthday: nil)
