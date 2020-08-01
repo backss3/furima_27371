@@ -9,22 +9,22 @@ describe Item do
     it "nameが空ならNG" do
       item = build(:item, name: nil)
       item.valid?
-      expect(iten.errors[:name]).to include("を入力してください")
+      expect(iten.errors[:name]).to include("can't be blank")
     end
     it "explainが空ならNG" do
       item = build(:item, explain: nil)
       item.valid?
-      expect(item.errors[:explain]).to include("を入力してください")
+      expect(item.errors[:explain]).to include("can't be blank")
     end
     it "priceが空ならNG" do
       item = build(:item, price: nil)
       item.valid?
-      expect(product.errors[:price]).to include("を入力してください")
+      expect(product.errors[:price]).to include("can't be blank")
     end
     it "priceがinteger以外ならNG" do
       item = build(:item, price: "３００")
       item.valid?
-      expect(item.errors[:price]).to include("は数値で入力してください")
+      expect(item.errors[:price]).to include("can't be blank")
     end
     it "priceが300円未満ならNG" do
       item = build(:item, price: "290")
