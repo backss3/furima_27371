@@ -32,7 +32,7 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-      ridirect_to root_path
+      redirect_to root_path
     else
       render :edit
     end
