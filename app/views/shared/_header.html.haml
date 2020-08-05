@@ -6,16 +6,13 @@
       %button.search-button
         = image_tag "search.png", class:"search-icon"
   .nav
+    %ul.lists-left
+      %li= link_to 'カテゴリー', "#", class: "category-list"
+      %li= link_to 'ブランド', "#", class: "brand-list"
     - if user_signed_in?
-      %ul.lists-left
-        %li= link_to 'カテゴリー', "#", class: "category-list"
-        %li= link_to 'ブランド', "#", class: "brand-list"
       %ul.lists-right
         %li= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout"
     - else
-      %ul.lists-left
-        %li= link_to 'カテゴリー', "#", class: "category-list"
-        %li= link_to 'ブランド', "#", class: "brand-list"
       %ul.lists-right
         %li= link_to 'ログイン', "/users/sign_in", class: "login"
         %li= link_to '新規登録', "/users/sign_up", class: "sign-up"

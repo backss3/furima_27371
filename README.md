@@ -37,7 +37,7 @@
 - has_many :comments
 - belongs_to :deal_item
 
-## deal_item_table
+## order_table
 |Column|Type|Options|
 |------|----|-------|
 |item_id|integer|null: false, foreign_key: true|
