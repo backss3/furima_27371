@@ -15,8 +15,8 @@
 ### Association
 - has_many :items
 - has_many :comments
-- belongs_to :address
-- has_many :deal_items
+- has_one :address
+- has_many :orders
 
 
 ## items_table
@@ -35,7 +35,7 @@
 ### Association
 - belongs_to :user
 - has_many :comments
-- belongs_to :deal_item
+- has_one :order
 
 ## order_table
 |Column|Type|Options|
