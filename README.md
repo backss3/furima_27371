@@ -33,9 +33,10 @@
 |price|integer|null: false|
 
 ### Association
-- belongs_to :address
+- has_one :address
 - has_many :comments
 - has_one :order
+- belongs_to :user
 
 ## order_table
 |Column|Type|Options|
