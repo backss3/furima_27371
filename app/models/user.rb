@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_one :address
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-         
+
   with_options presence: true do |assoc|
     assoc.validates :first_name
     assoc.validates :family_name
@@ -21,6 +21,6 @@ class User < ApplicationRecord
     assoc.validates :nickname
     assoc.validates :email
   end
-  validates :email,  format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
+  validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
   validates :password, length: { minimum: 7 }, format: { with: /(?=.*\d+.*)(?=.*[a-zA-Z]+.*)./ }
 end

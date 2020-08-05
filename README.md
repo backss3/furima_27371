@@ -15,8 +15,8 @@
 ### Association
 - has_many :items
 - has_many :comments
-- belongs_to :address
-- has_many :deal_items
+- has_one :address
+- has_many :orders
 
 
 ## items_table
@@ -33,9 +33,10 @@
 |price|integer|null: false|
 
 ### Association
-- belongs_to :user
+- has_one :address
 - has_many :comments
-- belongs_to :deal_item
+- has_one :order
+- belongs_to :user
 
 ## order_table
 |Column|Type|Options|
@@ -59,7 +60,7 @@
 |phone_number|integer|null: false|
 
 ### Association
-- belongs_to :user
+- belongs_to :item
 
 ## comments_table
 |Column|Type|Options|
