@@ -33,7 +33,7 @@
 |price|integer|null: false|
 
 ### Association
-- belongs_to :user
+- belongs_to :address
 - has_many :comments
 - has_one :order
 
@@ -59,7 +59,7 @@
 |phone_number|integer|null: false|
 
 ### Association
-- belongs_to :user
+- belongs_to :item
 
 ## comments_table
 |Column|Type|Options|

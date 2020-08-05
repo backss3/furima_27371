@@ -3,7 +3,6 @@ class OrderAddress
   attr_accessor :postal_cord, :prefecture_id, :city, :house_number, :building_name, :phone_number, :item_id, :user_id
   validates :postal_cord, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'is invalid. Include include hyphen(-)' }
   def save
-    
     order = Order.create(
       user_id: user_id, item_id: item_id
     )
