@@ -11,6 +11,7 @@
       %li= link_to 'ブランド', "#", class: "brand-list"
     - if user_signed_in?
       %ul.lists-right
+        %li= link_to current_user.nickname, "#", class: "logout"
         %li= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout"
     - else
       %ul.lists-right
